@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diqi Prasetyo - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        body { margin:0; font-family:'Poppins',sans-serif; background:#181a1b; color:#fff; scroll-behavior:smooth;}
+        nav { position:sticky; top:0; background:#111; display:flex; justify-content:center; gap:2rem; padding:1rem 0; z-index:10;}
+        nav a { color:#fff; text-decoration:none; font-weight:600; padding:0.5rem 1rem; border-radius:4px; transition:0.2s;}
+        nav a.active, nav a:hover { background:#1e90ff; color:#fff;}
+        section { min-height:100vh; padding:4rem 1rem 2rem 1rem; max-width:900px; margin:auto;}
+        .home-bg { position:fixed; top:0; left:0; width:100vw; height:100vh; object-fit:cover; z-index:-1; opacity:0.3;}
+        .profile-img { width:140px; height:140px; border-radius:50%; object-fit:cover; border:4px solid #1e90ff; margin-bottom:1rem;}
+        .services, .projects { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+        .card { background:#222; border-radius:12px; padding:2rem 1rem; text-align:center; box-shadow:0 2px 8px #0002;}
+        .project-img { width:100%; border-radius:8px; margin-bottom:1rem;}
+        .tags { margin:0.5rem 0; }
+        .tag { background:#1e90ff; color:#fff; border-radius:4px; padding:2px 8px; font-size:0.8em; margin-right:4px;}
+        .cta-btn, .btn { background:#1e90ff; color:#fff; border:none; border-radius:4px; padding:0.7rem 1.5rem; font-weight:600; margin:0.5rem; cursor:pointer; transition:0.2s;}
+        .cta-btn:hover, .btn:hover { background:#0d6efd;}
+        form input, form textarea { width:100%; padding:0.7rem; margin-bottom:1rem; border-radius:4px; border:none;}
+        .socials a { color:#1e90ff; margin-right:1rem; font-size:1.5rem;}
+        @media (max-width:600px) { section {padding:3rem 0.5rem;} nav {gap:1rem;} }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Service</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80" class="home-bg" alt="Background"/>
+        <h1>Hi, I'm <span style="color:#1e90ff;">Diqi Prasetyo</span></h1>
+        <h2>Web Developer & IoT Innovator</h2>
+        <p>Membuat web modern & solusi teknologi untuk masa depan.</p>
+        <a href="#project" class="cta-btn">Lihat Proyek</a>
+        <a href="cv.pdf" class="cta-btn" download>Download CV</a>
+    </section>
+
+    <section id="about">
+        <img src="profile.jpg" alt="Profile" class="profile-img"/>
+        <h2>About Me</h2>
+        <p>Saya Diqi, lulusan Teknik Informatika yang suka ngoding malam dan ngulik teknologi baru. Passion di web development, IoT, dan game prototyping. Pendekatan kerja saya: solutif, efisien, dan selalu belajar hal baru.</p>
+        <ul>
+            <li>📍 Yogyakarta</li>
+            <li>💼 Web Developer & IoT Enthusiast</li>
+            <li>🎓 S1 Teknik Informatika</li>
+            <li>🧠 Keahlian: Web Dev, IoT, Unity, Dashboard</li>
+        </ul>
+    </section>
+
+    <section id="service">
+        <h2>Service</h2>
+        <div class="services">
+            <div class="card">
+                <div>💻</div>
+                <h3>Web Development</h3>
+                <p>Pembuatan web dari desain hingga deployment.</p>
+            </div>
+            <div class="card">
+                <div>🔌</div>
+                <h3>IoT & Automation</h3>
+                <p>Integrasi sensor, ESP32, dan sistem monitoring.</p>
+            </div>
+            <div class="card">
+                <div>🎮</div>
+                <h3>Game Dev with Unity</h3>
+                <p>Prototyping game 2D/3D menggunakan Unity.</p>
+            </div>
+            <div class="card">
+                <div>📊</div>
+                <h3>Dashboard Monitoring</h3>
+                <p>Visualisasi data lingkungan dan energi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2>Project</h2>
+        <div class="projects">
+            <div class="card">
+                <img src="sparing.jpg" alt="Sparing" class="project-img"/>
+                <h3>Sparing (Monitoring Limbah)</h3>
+                <p>Monitoring limbah otomatis. Tools: ESP32, Firebase, React.</p>
+                <div class="tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Firebase</span>
+                </div>
+                <a href="#" class="btn">Lihat Detail</a>
+                <a href="#" class="btn">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="sipa.jpg" alt="SIPA" class="project-img"/>
+                <h3>SIPA (Surat Izin Air Tanah)</h3>
+                <p>Aplikasi pengelolaan izin air tanah. Tools: PHP, MySQL.</p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                </div>
+                <a href="#" class="btn">Lihat Detail</a>
+                <a href="#" class="btn">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="primeride.jpg" alt="PrimeRide" class="project-img"/>
+                <h3>PrimeRide Rental</h3>
+                <p>Rental mobil online. Tools: React, Node.js.</p>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                </div>
+                <a href="#" class="btn">Live Preview</a>
+                <a href="#" class="btn">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="mobil-iot.jpg" alt="Mobil IoT" class="project-img"/>
+                <h3>Mobil IoT - Tracking & Control</h3>
+                <p>Tracking & kontrol mobil via web. Tools: ESP32, MQTT.</p>
+                <div class="tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">MQTT</span>
+                </div>
+                <a href="#" class="btn">Lihat Detail</a>
+                <a href="#" class="btn">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Tertarik bekerja sama atau butuh bantuan teknis? Hubungi saya di bawah ini.</p>
+        <form>
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Pesan" required></textarea>
+            <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+        <div style="margin:1rem 0;">
+            <a href="mailto:diqi@email.com" class="btn">Email</a>
+            <a href="https://wa.me/6281234567890" class="btn">WhatsApp</a>
+        </div>
+        <div class="socials">
+            <a href="https://linkedin.com/in/diqi" target="_blank">LinkedIn</a>
+            <a href="https://github.com/diqi" target="_blank">GitHub</a>
+            <a href="https://instagram.com/diqi" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll active menu effect
+        const navLinks = document.querySelectorAll('nav a');
+        window.addEventListener('scroll', () => {
+            let fromTop = window.scrollY + 80;
+            navLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+                if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
